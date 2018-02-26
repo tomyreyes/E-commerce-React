@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Hats from './Hats'
-import Shoes from './Shoes'
+import White from './White'
+import Red from './Red'
 import ShoppingCart from './ShoppingCart'
 import { Switch, Link, Route, Router } from 'react-router-dom'
 import axios from 'axios'
@@ -10,82 +10,44 @@ class Shop extends Component {
         super()
         this.state = {
             cart: [],
-            shoes: [
+            reds: [
                 {
-                    name: 'High Top Sneaker',
-                    price: 15,
-                    picture: './../public/imgs/shoe1.png',
-                    type: 'shoe'
+                    name: 'Chateau Palmer Margaux 2016',
+                    price: 4000,
+                    picture: '../images/chateau_palmer_1.jpg',
+                    type: 'Bordeaux'
                 },
                 {
-                    name: 'Basketball Shoes',
-                    price: 100,
-                    picture: './../public/imgs/shoe2.png',
-                    type: 'shoe'
+                    name: 'Chambolle-Musigny 2006',
+                    price: 240,
+                    picture: '../images/burgundy.jpg',
+                    type: 'Burgundy'
                 },
                 {
-                    name: 'Tennis Shoes',
-                    price: 150,
-                    picture: './../public/imgs/shoe3.png',
-                    type: 'shoe'
-                },
-                {
-                    name: 'Heels',
-                    price: 60,
-                    picture: './../public/imgs/shoe3.png',
-                    type: 'shoe'
-
-                },
-                {
-                    name: 'Hiking Shoes',
-                    price: 90,
-                    picture: './../public/imgs/shoe3.png',
-                    type: 'shoe'
-                },
-                {
-                    name: 'Boxing Shoes',
-                    price: 80,
-                    picture: './../public/imgs/shoe3.png',
-                    type: 'shoe'
-
+                    name: 'Cote de Brouilly 2014',
+                    price: 30,
+                    picture: '../images/beaujolais.jpg',
+                    type: 'Beaujolais'
                 }
             ],
-            hats: [
+            whites: [
                 {
-                    name: 'Cap',
-                    price: 20,
-                    picture: './../public/imgs/hat1.png',
-                    type: 'hat'
+                    name: 'Chablis 2010',
+                    price: 50,
+                    picture: '../images/Chablis.jpg',
+                    type: 'Chablis'
                 },
                 {
-                    name: 'Fedora',
-                    price: 25,
-                    picture: './../public/imgs/hat2.png',
-                    type: 'hat'
+                    name: 'Meursault 2014',
+                    price: 89,
+                    picture: '../images/meursault.jpg',
+                    type: 'Burgundy'
                 },
                 {
-                    name: 'Helmet',
-                    price: 100,
-                    picture: './../public/imgs/hat3.png',
-                    type: 'hat'
-                },
-                {
-                    name: 'Cowboy Hat',
-                    price: 5,
-                    picture: './../public/imgs/hat1.png',
-                    type: 'hat'
-                },
-                {
-                    name: 'Snapback',
-                    price: 30,
-                    picture: './../public/imgs/hat1.png',
-                    type: 'hat'
-                },
-                {
-                    name: 'Pirate Hat',
-                    price: 100,
-                    picture: './../public/imgs/hat1.png',
-                    type: 'hat'
+                    name: 'Puligny-Montrachet 2015',
+                    price: 139,
+                    picture: '../images/puligny.jpg',
+                    type: 'Burgundy'
                 }
             ]
         }
@@ -137,11 +99,11 @@ class Shop extends Component {
                     {/* <Link to={match.url + "/cart"}>Shopping Cart</Link> */}
                 {/* </nav> */} 
                 <Switch>
-                    <Route path={match.path + "/shoes"} render={(routeProps)=>{
-                        return <Shoes shoes = {this.state.shoes} addToCart={this.addToCart}/>
+                    <Route path={match.path + "/red"} render={(routeProps)=>{
+                        return <Red reds = {this.state.reds} addToCart={this.addToCart}/>
                     }} />
-                    <Route path={match.path + "/hats"} render={(routeProps)=>{
-                        return <Hats hats={this.state.hats} addToCart={this.addToCart}/>
+                    <Route path={match.path + "/white"} render={(routeProps)=>{
+                        return <White whites={this.state.whites} addToCart={this.addToCart}/>
                     }} />
                     <Route path={match.path + "/cart"} render={(routeProps)=>{
                         return <ShoppingCart cart={this.state.cart} handleDelete={this.handleDelete} />

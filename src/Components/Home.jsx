@@ -51,7 +51,7 @@ class Home extends Component {
                                     <p>Explore our impeccable variety of lush, silky and complex reds.</p>
                                 </div>
                                 <div class="card-action">
-                                    <Link to="/shop/shoes">Red Wine</Link>
+                                    <Link to="/shop/red">Red Wine</Link>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ class Home extends Component {
                                     <p>Take a gander of our crisp and refreshing white wines.</p>
                                 </div>
                                 <div class="card-action">
-                                    <Link to="/shop/hats">White Wine</Link>
+                                    <Link to="/shop/white">White Wine</Link>
                                 </div>
                             </div>
                         </div>

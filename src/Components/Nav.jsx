@@ -9,8 +9,8 @@ class Nav extends Component {
         return (
             <div className="navbar-fixed">
                 <ul id="dropdown1" className="dropdown-content">
-                    <li><Link to="/shop/shoes">Shoes</Link></li>
-                    <li><Link to="/shop/hats">Hat</Link></li>
+                    <li><Link to="/shop/red">Red</Link></li>
+                    <li><Link to="/shop/white">White</Link></li>
                 </ul>
                 <nav>
                     <div className="nav-wrapper #212121 grey darken-4">

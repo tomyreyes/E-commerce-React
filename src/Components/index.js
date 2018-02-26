@@ -1,9 +1,9 @@
-import Hats from './Hats'
+import White from './White'
 import Home from './Home'
-import Shoes from './Shoes'
+import Red from './Red'
 import Shop from './Shop'
 import ShoppingCart from './ShoppingCart'
 import Nav from './Nav'
 import Footer from './Footer'
 
-export {Hats, Home, Shoes, Shop, ShoppingCart, Nav,Footer}
+export {White, Home, Red, Shop, ShoppingCart, Nav,Footer}
