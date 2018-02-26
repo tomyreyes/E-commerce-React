@@ -10,6 +10,8 @@ class ShoppingCart extends Component {
             <h4>{item.name}</h4>
             <h6>{item.price}</h6>
             <p>{item.type}</p>
+            <p>{i}</p>
+            <button onClick={()=>{this.props.handleDelete(i)}}>Delete</button>
             </div>
             )
         })

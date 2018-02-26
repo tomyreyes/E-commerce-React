@@ -11,7 +11,7 @@ class Shoes extends Component {
         })
         return (
             <div>
-                <h1>Shoes page </h1>
+                <h1>Shoes</h1>
                 {shoeInventory}
             </div>
         );

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Link, Route, Router } from 'react-router-dom'
-import { Home, Shop } from './Components'
+import { Home, Shop, Nav, Footer} from './Components'
+
 
 class App extends Component {
   constructor(){
@@ -25,18 +26,16 @@ componentDidMount(){
  
     return (
       <div>
-        <h1>App Component </h1>
-        <nav>
-          <Link to="/">Home</Link>|
-          <Link to="/shop">Shop</Link>
-        </nav>
+        <Nav/>
         <Switch>
           <Route path={match.path + "/"} render={(routeProps)=>{
             return <Home name={this.state.name} submitName={this.submitName} handleName={this.handleName}/>
           }} />
           <Route path={match.path + "shop"} component={Shop} />
         </Switch >
-      </div>
+        <Footer/>
+        </div>
+  
     );
   }
 }

@@ -118,20 +118,24 @@ class Shop extends Component {
             })
     })
 }
-
+    handleDelete = (i) => {
+        let remove = this.state.cart.filter((remove, index) => (index !== i) ? remove : '')
+        this.setState({
+            cart: remove
+        })
+    }
+       
 
     render() {
         let {match} = this.props
+        
         return (
             <div>
-                <h1>Shop page </h1>
-                <h4>{this.name}</h4>
-                <p>derpderpder </p>
-                <nav>
+                {/* <nav>
                     <Link to={match.url + "/shoes"}>Shoes</Link>|
                     <Link to={match.url + "/hats"}>Hats</Link>|
-                    <Link to={match.url + "/cart"}>Shopping Cart</Link>
-                </nav>
+                    {/* <Link to={match.url + "/cart"}>Shopping Cart</Link> */}
+                {/* </nav> */} 
                 <Switch>
                     <Route path={match.path + "/shoes"} render={(routeProps)=>{
                         return <Shoes shoes = {this.state.shoes} addToCart={this.addToCart}/>
@@ -140,7 +144,7 @@ class Shop extends Component {
                         return <Hats hats={this.state.hats} addToCart={this.addToCart}/>
                     }} />
                     <Route path={match.path + "/cart"} render={(routeProps)=>{
-                        return <ShoppingCart cart={this.state.cart}/>
+                        return <ShoppingCart cart={this.state.cart} handleDelete={this.handleDelete} />
                     }} />
                 </Switch>
             </div>
