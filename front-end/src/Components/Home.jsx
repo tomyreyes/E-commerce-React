@@ -3,13 +3,6 @@ import {Link} from 'react-router-dom'
 
 
 class Home extends Component {
-    constructor(){
-        super()
-        this.state= {name:''}
-    }
-    updateName = (e) => {
-        this.setState({ name: e.target.value })
-    }
     render() {
         let { match } = this.props
         let user = this.props.name
@@ -31,15 +24,7 @@ class Home extends Component {
 
         return (
             <div className="center-align">
-                { (user === undefined) ? (<div> Please enter your name<input value={this.state.name} onChange={this.updateName} onKeyDown={(e) => { if (e.keyCode === 13) this.props.handleName(this.state.name) }} placeholder="Enter your name..." /></div>) : ''}
-                
-                { (user !== undefined) ?         
-                    (<div className="z-depth-3"style={background}>
-                 <h1 style={h1}>Welcome {user}</h1>
-                        {/* <img src="../images/wine.jpg"></img> */}
-                </div>)
-                : ''
-        }   
+            <div><img src='../images/wine.jpg'/>/div>
                 <div class="row">
                     <div class="col s12 m12">
                     <div class="col s6 m6">
@@ -71,6 +56,7 @@ class Home extends Component {
                     </div>
                     </div>
                     
+            </div>
             </div>
 
         );

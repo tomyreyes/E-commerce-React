@@ -8,6 +8,7 @@ class ShoppingCart extends Component {
         let totalPrice = this.props.cart.reduce((sum, price)=>{
             return sum + price.price
         }, 0)
+        
         let cartList = this.props.cart.map((item,i)=>{
             return (<div key={i} className="col s6 center-align">
             <h4>{item.name}</h4>
