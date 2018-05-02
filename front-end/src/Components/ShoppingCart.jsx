@@ -23,7 +23,7 @@ class ShoppingCart extends Component {
             <div className="container">
             <h1 className="center-align">Cart</h1>
             <div className="row">
-                    <h5 className="center-align">Total: {totalPrice}</h5>
+                    <h5 className="center-align">Cart Total: {totalPrice}</h5>
                 {cartList}
                 
                 </div>
